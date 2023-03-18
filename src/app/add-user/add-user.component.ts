@@ -29,11 +29,13 @@ export class AddUserComponent implements OnInit {
   createUser ()
   {
     let user = this.userForm.getRawValue();
-    console.log(user.username);
-    console.log(user.email);
-    console.log(user.phone);
+    // console.log(user.username);
+    // console.log(user.email);
+    // console.log(user.phone);
 
-  this.UserService.setUser(user);
+    this.UserService.setUser(user);
+
+    this.userForm.reset();
 
   }
 }
